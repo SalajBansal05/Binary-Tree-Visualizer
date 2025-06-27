@@ -1,5 +1,5 @@
-var regFill = "green";
-var highlightFill = "lightblue";
+var regFill = "rgb(58, 162, 232)"
+var highlightFill = "rgb(58, 122, 232)";
 
 var regFillText = "black"
 var highlightFillText = "white"
