@@ -27,6 +27,18 @@ function heapify() {
   }
 }
 
+function minHeapify() {
+  reset();
+  let inputText = document.getElementById("array-input")
+  if (inputText.value !== '') {
+    input = inputText.value.trim().split(/\s+|\,+/g).map((num) => parseInt(num));
+    makeMinHeap(input, input.length);
+    createBinaryTreeAndArr(input);
+    document.getElementById('instructions').innerHTML = "<p> Parent's value is always lesser than or equal to the values of its children.</p>";
+    document.getElementById('visual-title').innerHTML = "Min-Heap Binary Tree And Array";
+  }
+}
+
 function createBinaryTreeAndArr(arr) {
   arrayContainer = createContainer("array-visual", arr, arr.length * 60, 100);
   let tree = new Tree()
